@@ -15,6 +15,8 @@ define('USER', $database['user']);
 define('PASS', $database['pass']);
 define('DATABASE', $database['database']);
 
+define('URL', 'http://' . $_SERVER['SERVER_NAME'] . rtrim($_SERVER['PHP_SELF'], 'index.php'));
+
 /* Paths */
 define('FW', '../cms/');
 define('LIBS', FW . 'libs/');

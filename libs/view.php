@@ -1,6 +1,6 @@
 <?php
 class View{
-	function render($view){
+	function render($view, $data = null){
 		$header = VIEWS . "common/header.php";
 		$sidebar = VIEWS . "common/sidebar.php";
 		$footer = VIEWS . "common/footer.php";
