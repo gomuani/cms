@@ -4,17 +4,6 @@
 		Configuration
 *******************************/
 
-/* Database Configuration */
-$database['host'] = 'localhost';
-$database['user'] = 'asaelx_equis';
-$database['pass'] = 'qazWSX11';
-$database['database'] = 'asaelx_cinepolis';
-
-define('HOST', $database['host']);
-define('USER', $database['user']);
-define('PASS', $database['pass']);
-define('DATABASE', $database['database']);
-
 define('URL', 'http://' . $_SERVER['SERVER_NAME'] . rtrim($_SERVER['PHP_SELF'], 'index.php'));
 
 /* Paths */
