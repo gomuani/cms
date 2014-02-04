@@ -27,7 +27,7 @@ private $stmt;
 		}
 	}
 
-	private function query($query){
+	function query($query){
 		$this->stmt = $this->prepare($query);
 	}
 
@@ -82,16 +82,7 @@ private $stmt;
 		return $this->rollBack();
 	}
 
-	function select($fields){
-		$columns = implode(", ", array_keys($fields));
-		$this->select = "SELECT $columns";
-	}
-
-	function where($string){
-		$this->where = "WHERE $string";
-	}
-
-	function doSelect($table, $after = null){
+	function select($table, $after = null){
 		if(is_null($after)):
 			$query = "SELECT * FROM $table";
 		else:
@@ -106,7 +97,7 @@ private $stmt;
 		endif;
 	}
 
-	function doInsert($table, $data){
+	function insert($table, $data){
 		$data = get_object_vars($data);
 		$columns = implode(", ", array_keys($data));
 		$values = ':' . implode(', :', array_keys($data));
@@ -119,7 +110,7 @@ private $stmt;
 		return $this->lastId();
 	}
 
-	function doUpdate($table, $data, $after){
+	function update($table, $data, $after){
 		$sets = null;
 		foreach ($data as $column => $value):
 			$sets .= "$column = :$column,";

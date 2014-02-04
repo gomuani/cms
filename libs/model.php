@@ -27,7 +27,7 @@ class Model{
 		$this->db->delete($this->table, $after);
 		return true;
 	}
-	function get($after){
+	function get($after = null){
 		$result = $this->db->select($this->table, $after);
 		return $result;
 	}
