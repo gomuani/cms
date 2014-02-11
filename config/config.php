@@ -13,6 +13,7 @@ define('LOGS', FW . 'logs/');
 define('VIEWS', 'views/');
 define('MODELS', 'models/');
 define('CONTROLLERS', 'controllers/');
+define('TOOLS', FW . 'tools/');
 define('ASSETS', 'assets/');
 define('CSS', ASSETS . 'css/');
 define('JS', ASSETS . 'js/');

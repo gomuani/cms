@@ -3,7 +3,8 @@ function __autoload($class) {
 	$paths = array(
 		LIBS,
 		MODELS,
-		CONTROLLERS
+		CONTROLLERS,
+		TOOLS
 	);
 	foreach ($paths as $path) {
 		$file = $path . $class . '.php';
